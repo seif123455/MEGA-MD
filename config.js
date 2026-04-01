@@ -1,36 +1,45 @@
 import 'dotenv/config';
+
 const _prefixes = process.env.PREFIXES ? process.env.PREFIXES.split(',') : ['.', '!', '/', '#'];
+
 const config = {
     // Bot Identity
-    botName: process.env.BOT_NAME || 'Seif   Bot',
-    botOwner: process.env.BOT_OWNER || 'Seif ',
+    botName: process.env.BOT_NAME || 'Crazy Seif Bot',
+    botOwner: process.env.BOT_OWNER || 'Crazy Seif',
     ownerNumber: process.env.OWNER_NUMBER || '201144534147',
-    author: process.env.AUTHOR || 'GlobalTechInfo',
-    packname: process.env.PACKNAME || 'Seif',
-    description: process.env.DESCRIPTION || 'High performance multi-device WhatsApp bot',
+    author: process.env.AUTHOR || 'Crazy Seif',
+    packname: process.env.PACKNAME || 'Crazy Seif',
+    description: process.env.DESCRIPTION || 'Crazy Seif WhatsApp Bot',
     version: '6.0.0',
+
     // Bot Config
     prefixes: _prefixes,
     prefix: _prefixes[0],
     commandMode: process.env.COMMAND_MODE || 'public',
-    timeZone: process.env.TIMEZONE || 'Asia/Karachi',
+    timeZone: process.env.TIMEZONE || 'Africa/Cairo',
+
     // Links
     channelLink: process.env.CHANNEL_LINK || 'https://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07',
     updateZipUrl: process.env.UPDATE_URL || 'https://github.com/GlobalTechInfo/MEGA-MD/archive/refs/heads/main.zip',
-    ytChannel: process.env.YT_CHANNEL || 'GlobalTechInfo',
+    ytChannel: process.env.YT_CHANNEL || 'Crazy Seif',
+
     // Session
     sessionId: process.env.SESSION_ID || 'GlobalTechInfo/MEGA-MD_eb168a84e633e10927da6c852d1f64cc',
     pairingNumber: process.env.PAIRING_NUMBER || '201144534147',
+
     // Performance
     port: Number(process.env.PORT) || 5000,
     maxStoreMessages: Number(process.env.MAX_STORE_MESSAGES) || 20,
     tempCleanupInterval: Number(process.env.CLEANUP_INTERVAL) || 1 * 60 * 60 * 1000,
     storeWriteInterval: Number(process.env.STORE_WRITE_INTERVAL) || 10000,
+
     // API Keys
     giphyApiKey: process.env.GIPHY_API_KEY || 'qnl7ssQChTdPjsKta2Ax2LMaGXz303tq',
     removeBgKey: process.env.REMOVEBG_KEY || '',
+
     // Warn system
     warnCount: 3,
+
     // External APIs
     APIs: {
         xteam: 'https://api.xteam.xyz',
@@ -44,6 +53,7 @@ const config = {
         nrtm: 'https://fg-nrtm.ddns.net',
         fgmods: 'https://api-fgmods.ddns.net'
     },
+
     APIKeys: {
         'https://api.xteam.xyz': 'd90a9e986e18778b',
         'https://api.lolhuman.xyz': '85faf717d0545d14074659ad',
@@ -53,4 +63,5 @@ const config = {
         'https://api-fgmods.ddns.net': 'fg-dylux'
     }
 };
+
 export default config;
